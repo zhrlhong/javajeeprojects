@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app
+	xmlns="http://www.bea.com/ns/weblogic/90"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+	<context-root>javajeeprojects</context-root>
+
+	<session-descriptor>
+
+
+		<debug-enabled>true</debug-enabled>
+
+		<id-length>52</id-length>
+
+		<tracking-enabled>true</tracking-enabled>
+
+		<cache-size>1024</cache-size>
+
+		<max-in-memory-sessions>-1</max-in-memory-sessions>
+
+		<cookies-enabled>true</cookies-enabled>
+
+	</session-descriptor>
+	<container-descriptor>
+		<prefer-web-inf-classes>false</prefer-web-inf-classes>
+		<prefer-application-packages>
+			<!-- JSF -->
+			<package-name>javax.faces.*</package-name>
+			<!-- JSF -->
+		</prefer-application-packages>
+
+		<prefer-application-resources>
+			<resource-name>javax.faces.*</resource-name>
+			<resource-name>com.sun.faces.*</resource-name>
+			<resource-name>com.bea.faces.*</resource-name>
+
+			<resource-name>META-INF/services/javax.servlet.ServletContainerInitializer</resource-name>
+			<resource-name>META-INF/services/com.sun.faces.*</resource-name>
+		</prefer-application-resources>
+	</container-descriptor>
+
+</weblogic-web-app>
